@@ -1,0 +1,66 @@
+<section>
+  <div class="p-col-12 d-flex justify-content-center">
+    <div class="p-col-12 p-p-0">
+
+      <div class="d-flex">
+
+        <div class="p-xl-12 p-lg-12">
+          <div class="card card-info card-info">
+            <div class="header d-flex justify-content-between">
+              <div class="d-flex flex-column">
+                <h4 class="title"><i class="mdi mdi-account p-ml-1"></i>Register Participant</h4>
+              </div>
+          </div>
+          <!-- -->
+            <div class="body">
+              <form id="registerParticipantForm"   [formGroup]="form"       (ngSubmit)="registerParticipant()" >
+                <div class="p-fluid p-formgrid p-grid">
+                  <div class="p-field p-col-12 col-md-4">
+                    <label class="form-control-label">First Name<span style="color: red">*</span></label>
+                    <input pInputText  pInputText formControlName="firstName" tabindex="1"  />
+                  </div>
+
+                  <div class="p-field p-col-12 col-md-4">
+                    <label class="form-control-label">Last Name<span style="color: red">*</span></label>
+                    <input  pInputText formControlName="lastName" tabindex="2" maxlength="50" />
+                  </div>
+                  <div class="p-field p-col-12 col-md-4">
+                    <label class="form-control-label">Email Address <span style="color: red">*</span></label>
+                    <input  pInputText formControlName="emailAddress" tabindex="3" maxlength="50"/>
+                  </div>
+                  <div class="p-field p-col-12 col-md-4">
+                    <label class="form-control-label">Product Serial Number<span style="color: red">*</span></label>
+                    <input  pInputText formControlName="productSerialNumber" tabindex="3" maxlength="50"/>
+                    <span  style="color: blue; " >serial format: XXXXX-XXXXX-XXXXX-XXXXX</span>
+                  </div>
+                  <div class="p-field p-col-12 col-md-4">
+                    <label class="form-control-label">I'm older than 18 years old?</label>
+                    <input  type="checkbox" formControlName="hasOlderThan18" tabindex="7"  />
+                  </div>
+                  
+                  
+                  <!-- <div class="p-field p-col-12 col-md-4">
+                    <label class="form-control-label">تاریخ تولد<span style="color: red">*</span></label>
+                    <app-date-picker formControlName="birthDay"  tabindex="10" ></app-date-picker>
+                  </div>
+                  -->
+                </div>
+                <div class="footer">
+                  <div class="d-flex justify-content-end">
+                    <button  (click)="back()"  label="Back" pButton icon="pi pi-back" iconPos="left" class="p-button-info"></button>
+                    &nbsp;
+                    <button type="submit" label="Register" pButton icon="pi pi-check" iconPos="left" class="p-button-success"></button>
+                    
+                    
+
+               </div>
+           
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

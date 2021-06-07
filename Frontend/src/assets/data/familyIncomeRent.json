@@ -1,0 +1,21 @@
+[
+{
+    "id": 1,
+    "title": "املاک و مستغلات",
+    "icon" : "mdi-home",
+    "done" : false
+},
+{
+  "id": 2,
+  "title": "وسایط نقلیه دریایی",
+  "icon" : "mdi-sail-boat",
+  "done" : false
+},
+{
+  "id": 3,
+  "title": "وسایط نقلیه جاده ای",
+  "icon" : "mdi-car",
+  "done" : false
+}
+]
+

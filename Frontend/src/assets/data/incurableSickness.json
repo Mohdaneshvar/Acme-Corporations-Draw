@@ -1,0 +1,35 @@
+[
+    {
+      "value" : null,
+      "label" : "انتخاب کنید"
+    },
+    {
+      "value" : 1,
+      "label" : "ام اس"
+    },
+    {
+        "value" : 2,
+        "label" : "متابولیک"
+      },
+      {
+        "value" : 3,
+        "label" : "بال پروانه ای"
+      },
+      {
+        "value" : 4,
+        "label" : "اتیسم"
+      },
+      {
+        "value" : 5,
+        "label" : "CF"
+      },
+      {
+        "value" : 6,
+        "label" : "SMA"
+      },
+      {
+        "value" : 7,
+        "label" : "PPH(پرفشاری شریان ریوی اولیه)"
+      }
+    
+]

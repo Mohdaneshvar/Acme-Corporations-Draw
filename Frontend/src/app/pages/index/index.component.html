@@ -1,0 +1,76 @@
+<section>
+    <div class="index-card p-col-12 p-md-10 p-lg-10 p-0 m-0" *ngIf="menuList.length>0">
+        <div class="card card-index">
+            <div class="header d-flex justify-content-between">
+                <h4 class="title">{{'Page.Home.AppTitle' | translate}}</h4>
+                <!-- <img width="242" height="92" src="/assets/imgs/pdnLogo.png" /> -->
+            </div>
+            <div class="body pb-4">
+                <div class="form-row d-flex flex-wrap">
+                    <div class="btn-widget-container form-group p-sm-12 p-md-3 p-lg-3" *ngFor="let item of menuList">
+                        <ng-container *ngIf="item.route.indexOf('href=')===-1; then route else href"></ng-container>
+                        <ng-template #route>
+                            <a class="btn-widget text-center" [routerLink]="[item.route]" [queryParams]="item.params" style="max-height: 200px;">
+                                <div class="icon"><i class="mdi {{item.icon}}"></i></div>
+                                <h6 class="title">{{item.title | translate}}</h6>
+                                <small class="desc">{{item.desc | translate}}</small>
+                            </a>
+                        </ng-template>
+                        <ng-template #href>
+                            <a class="btn-widget text-center" href="{{item.route.replace('href=', '')}}" target="_blank" style="max-height: 200px;">
+                                <div class="icon"><i class="mdi {{item.icon}}"></i></div>
+                                <h6 class="title">{{item.title | translate}}</h6>
+                                <small class="desc">{{item.desc | translate}}</small>
+                            </a>
+                        </ng-template>
+                    </div>
+                    <div class="btn-widget-container form-group p-sm-12 p-md-9 p-lg-9 help-contents">
+                        <div *ngIf="helps?.length > 0;">
+                            <div class="col-12">
+                                <ul>
+                                    <li *ngFor="let item of helps">
+                                        <span class="text-bold">{{item.before}}</span>
+                                        <span *ngIf="item.icon == 'home'">
+                                            <i class="mdi mdi-24px mdi-home"></i>
+                                        </span>
+                                        <span *ngIf="item.icon == 'question'">
+                                            <i class=" mdi mdi-24px mdi-account-question "></i>
+                                        </span>
+                                        <span *ngIf="item.icon=='plus' ">
+                                        <button type="button" disabled pButton icon="mdi mdi-plus" iconPos="left" class="p-button-rounded p-button-success wh34"></button>
+                                        </span>
+                                        <span *ngIf="item.icon == 'minus'">
+                                            <button type=" button " disabled pButton icon="mdi mdi-minus " iconPos="left " class="p-button-rounded p-button-danger wh34"></button>
+                                        </span>
+                                        <span *ngIf="item.icon=='next' ">
+                                          <button pButton type="button" disabled icon="mdi mdi-arrow-left-bold-outline" class="p-button-success p-button-sm flex-1 h34" label="مرحله بعد" iconPos="right"></button>
+                                            </span>
+                                        <span *ngIf="item.icon=='back' ">
+                                              <button pButton type="button" disabled icon="mdi mdi-arrow-right-bold-outline" class="p-button-danger p-button-sm flex-1 h34" label="مرحله قبل"></button>
+                                                </span>
+                                        <span *ngIf="item.after.length> 0"> {{item.after}}
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="index-card p-col-12 p-md-7">
+        <div class="card">
+            <div class="body p-3">
+                <div class="form-row">
+                    <div class="col-{{12/pageHistory.length}} p1" *ngFor="let item of pageHistory">
+                        <button type="button" class="btn btn-light col-12" [routerLink]="[item.route]" [queryParams]="item.params"><i class="mdi {{item.icon}} mr-2"></i>{{item.title |
+                            translate}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "حقوق و مزایای کارمندی و کارگری",
+    "icon" : "mdi-account-cash-outline",
+    "done" : false
+  },
+{
+  "id": 2,
+  "title": "حقوق بازنشستگی",
+  "icon" : "mdi-cash",
+  "done" : false
+},
+{
+  "id": 3,
+  "title": "باز خرید خدمت",
+  "icon" : "mdi-cash-refund",
+  "done" : false
+},
+{
+  "id": 4,
+  "title": "درآمد از مشاغل آزاد",
+  "icon" : "mdi-cash-multiple",
+  "done" : false
+},
+{
+  "id": 5,
+  "title": "کمک های دریافتی از موسسات خیریه",
+  "icon" : "mdi-file-table-box-multiple",
+  "done" : false
+}
+]

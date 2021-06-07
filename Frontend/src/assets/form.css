@@ -1,0 +1,132 @@
+.ng-invalid.ng-touched {
+    border-color: red;
+}
+
+.error-block {
+    color: red;
+    font-size: .75rem;
+    display: inline-block;
+    padding: 0 5px !important;
+}
+
+.error-block span {
+    display: block;
+    margin-top: 10px;
+}
+
+.span-padding {
+    padding-top: 5px;
+}
+
+.p-message-close.p-link {
+    margin-right: auto !important;
+    margin-left: 0px !important;
+}
+
+.p-message.p-message-error .p-message-icon {
+    padding: 3px;
+}
+
+.details-color {
+    color: #ff9644 !important;
+}
+
+.country-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex-1 {
+    z-index: 1 !important;
+}
+
+.p-dialog-content ul {
+    list-style: none !important;
+}
+
+legend {
+    width: auto !important;
+    font-size: 1rem !important;
+    background-color: #F6F9FB !important;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    background: #ffffff !important;
+    border-color: #dee2e6 #dee2e6 #ffffff #dee2e6 !important;
+    color: #00a7df !important;
+}
+
+.rule-style {
+    float: left;
+    padding: 8px;
+}
+
+.p-confirm-popup .p-confirm-popup-message {
+    color: red !important;
+}
+
+.p-confirm-popup .p-confirm-popup-icon {
+    color: red !important;
+}
+
+.p-confirm-popup .p-confirm-popup-footer button:last-child {
+    margin: 0 0.5rem 0 0 !important;
+}
+
+.p-confirm-popup {
+    background: #fff3cd;
+    border: solid #ffeeba;
+}
+
+.p-confirm-popup .p-confirm-popup-footer {
+    padding: 0px !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#healthConditiondrp .p-dropdown {
+    background-color: #B3E5FC !important;
+}
+
+p-fileupload .p-button-icon-only {
+    height: 20px;
+}
+
+.p-inputgroup>button {
+    height: 38px !important;
+}
+
+.arrow-zindex {
+    z-index: 9000000 !important;
+}
+
+.progressbar li .mdi {
+    margin-bottom: 5px !important;
+}
+
+.progressbar li.active::after {
+    background-color: '' !important;
+}
+
+.mobile-account{
+  width: 37px !important;
+  height: 37px !important;
+  font-size: 1.5rem !important;
+}
+
+
+.mobile-buttons{
+  position: absolute;
+  left: 10px;
+  top: 16px;
+}
+
+
+.p-checkbox-label {
+  text-align: justify;
+  line-height: 20px !important;
+}

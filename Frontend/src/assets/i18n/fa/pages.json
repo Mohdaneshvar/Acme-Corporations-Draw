@@ -1,0 +1,27 @@
+{
+  "Page": {
+   
+    "Home": {
+      "AppTitle": "Acme Corporation's Draw"
+      }
+    },
+   
+   
+    "Login": {
+   
+      "Username": "user name",
+      "Password": "Password",
+      "Captcha": "captcha code",
+      "Placeholder": {
+        "Username": "Please enter user name",
+        "Password": "Please enter password",
+        "Captcha": "please enter captcha"
+      },
+      "Validation": {
+        "Username": "Please enter user name",
+        "Password": "Please enter password",
+        "Captcha": "please enter captcha"
+      }
+  }
+    
+}

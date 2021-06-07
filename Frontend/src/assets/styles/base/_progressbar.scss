@@ -1,0 +1,117 @@
+.progressbar-title {
+  border-bottom: 1px dashed #e0e0e0;
+  font-weight: bold;
+}
+
+.progressbar {
+  $color: #e0e0e0;
+  $activeColor: #7266fc;
+  $doneColor: #2dcea2;
+
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  list-style: none;
+
+  li {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    line-height: 1.5rem;
+
+    @media only screen and (max-width: 600px) {
+      display: none;
+
+      &::after {
+        display: none !important;
+      }
+
+      &.active {
+        display: flex;
+        align-items: center;
+        color: #656565 !important;
+      }
+
+      .mdi {
+        margin: 0 0 0 10px !important;
+      }
+
+      .title {
+        font-size: 1rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 5px;
+      background-color: $color;
+      position: absolute;
+      left: -50%;
+      top: 20px;
+      z-index: -1;
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+
+    &.active {
+      font-weight: bold;
+      color: $activeColor;
+
+      &::after {
+        background-color: $activeColor;
+      }
+
+      .mdi {
+        background-color: $activeColor !important;
+        color: #fff;
+
+        &::before {
+          animation: 1s tada forwards;
+        }
+      }
+    }
+
+    &.done {
+      &::after {
+        background-color: $doneColor;
+      }
+
+      .mdi {
+        background-color: $doneColor;
+        color: #fff !important;
+      }
+    }
+
+    .mdi {
+      width: 44px;
+      height: 43px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color;
+      color: #6b6b6b;
+      font-size: 1.3rem;
+      border-radius: 50%;
+      margin: 0 auto 1rem auto;
+    }
+  }
+}
+
+.progress-progressbar {
+  width: 100%;
+  background-color: #f7f5fa;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+
+  .bar {
+    height: 15px;
+    border-radius: 10px;
+    background-color: #2dcea2;
+  }
+}

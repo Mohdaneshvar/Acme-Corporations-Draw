@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "اطلاعات پایه",
+    "icon" : "mdi-account-circle-outline",
+    "done" : false
+  },
+{
+  "id": 2,
+  "title": "سطح تحصیلات",
+  "icon" : "mdi-cast-education",
+  "done" : false
+},
+{
+  "id": 3,
+  "title": "وضعیت سلامتی",
+  "icon" : "mdi-head-check-outline",
+  "done" : false
+},
+{
+  "id": 4,
+  "title": "وضعیت شغلی",
+  "icon" : "mdi-briefcase-variant-outline",
+  "done" : false
+},
+{
+  "id": 5,
+  "title": "نشانی محل سکونت و اطلاعات تماس",
+  "icon" : "mdi-home-city",
+  "done" : false
+}
+]

@@ -1,0 +1,185 @@
+<main id="main">
+  <div class="layout-container">
+    <!-- <app-sidebar [menu]="menu" [fixed]="homeData.sideBarFixed" [expanded]="homeData.sideBarExpanded"
+    (OnStatusChanged)="onSidebarStatusChange($event)">
+  </app-sidebar> -->
+
+    <article class="content">
+      <nav class="fixed">
+        <div class="header-container">
+          <div class="d-none d-md-flex justify-content-between" style="margin-top: 15px;">
+            <img src="/assets/imgs/main.png" width="19" height="19" /> &nbsp;
+            <h5 class="font-weight-normal p-m-0">{{'Page.Home.AppTitle' | translate}}</h5>
+            <!-- <button (click)="temporaryOnSave()" type="button" label="{{ 'Public.Temporary' | translate }}" pButton icon="mdi mdi-database-edit mdi-24px mdi-spin" iconPos="left" class="p-button-secondary"></button>
+          &nbsp;
+          <button (click)="mainOnSave()" type="button" label="{{ 'Public.FinalSave' | translate }}" pButton icon="mdi mdi-database-check mdi-24px mdi-spin" iconPos="left" class="p-button-success"></button> -->
+          </div>
+
+          <!-- <ul class="breadcrumb d-none">
+          <li><a [routerLink]="[route.HOME_INDEX]">{{env.title}}</a></li>
+          <li *ngFor="let item of homeData.breadcrumbList"><a [routerLink]="[item.key]">{{item.value | translate}}</a>
+          </li>
+        </ul> -->
+
+
+
+
+
+
+
+          <!-- <ul class="navbar-nav ml-md-auto">
+          <li class="nav-item">
+            <button (click)="reset()" type="button" label="{{ 'Public.Reset' | translate }}" pButton icon="mdi mdi-location-exit mdi-24px mdi-spin" iconPos="left" class="p-button-secondary"></button>
+            <a class="nav-link" (click)="navBarClick($event, item)" [title]="item.title">
+              <span class="badge" *ngIf="item.badge>0">{{item.badge}}</span>
+
+              <i class="d-flex mdi {{item.icon}} mdi-24px"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item d-md-none d-flex">
+                            <a class="nav-link" (click)="homeData.sideBarExpanded=true">
+                                <i class="mdi mdi-menu mdi-24px"></i>
+                            </a>
+                        </li>
+                    </ul>
+                  id="dropdownMenuButton" (click)="logout()" appTooltip="خروج"-->
+
+          <ul class="navbar-nav p-0 ml-auto ml-md-0" style="position:absolute;right:20px;">
+            <!-- <li class="nav-item">
+              <a class="nav-link">
+                <span class="fullname" *ngIf="homeData.userInfo">{{homeData.userInfo.Name}}
+                  {{homeData.userInfo.LastName}}</span>
+              </a>
+
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link"  *ngIf="!this.userIsLogin" (click)="login()" appTooltip="Login" tooltip="Login">
+                <i class="mdi mdi-login mdi-24px mr-2"></i>
+
+              </a>
+
+            </li>
+            <li class="nav-item" *ngIf="this.userIsLogin">
+              <a class="nav-link"  (click)="logout()" appTooltip="Logout" tooltip="Logout">
+                <i class="mdi mdi-logout mdi-24px mr-2"></i>
+
+              </a>
+
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+
+      <div class="body p-2" >
+<!--         
+          <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Stockholm-icons-/-Navigation-/-Up-2" stroke="none" stroke-width="1" fill="#2dcea2"
+              fill-rule="evenodd">
+              <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+              <rect id="Rectangle" fill="#fff" opacity="0.3" x="11" y="10" width="2" height="10" rx="1"></rect>
+              <path
+                d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                id="Path" fill="#fff" fill-rule="nonzero"></path>
+            </g>
+          </svg> -->
+
+        <!-- <div class="p-col-12 d-flex justify-content-center" *ngIf="homeService.MainNavbar < 5 && homeService.MainNavbar">
+                  <div class="p-col-12 p-p-0">
+                      <div class="p-xl-12 p-lg-12 p-md-12 p-sm-12">
+                          <div class="card card-progressbar" style="height: 130px;">
+                              <div class="body">
+                                  <ul class="progressbar">
+                                      <li *ngFor="let nav of navList" [ngClass]="{'active': homeService.MainNavbar===nav.id, 'done': nav.done}">
+                                          <i class="mdi" [ngClass]="(nav.done && homeService.MainNavbar!==nav.id) ? 'mdi-check' : nav.icon"></i>
+                                          <span class="title">{{nav.title}}</span>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="footer d-block d-md-none">
+                                  <div class="progress-progressbar p-mt-3">
+                                      <div class="bar" [style.width.%]="homeService.MainNavbar"><small>{{homeService.MainNavbar}}%</small></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div> -->
+
+
+
+
+
+        <router-outlet></router-outlet>
+      </div>
+
+      <!-- <footer class="footer pdn-copyright" [ngClass]="{'mr-sidebar': !homeData.sideBarFixed}">
+      <p class="copyrights m-0">
+        <a routerLink="/home/change-log"><small class="mr-2">نسخه {{homeData.version}}</small></a> ©
+        تمامی حقوق برای <a class="link" href="https://www.pdnco.ir/" target="_blank"
+          title="ورود به سایت شرکت پایانه های داده ای نوین"> شرکت پایانه های داده ای نوین</a>
+        محفوظ است.
+      </p>
+    </footer> -->
+    </article>
+  </div>
+
+  <!-- <app-dialog #reportBugDialog name="reportBugDialog" [bodyTemplate]="reportBugBodyTemplate"
+  [footerTemplate]="reportBugFooterTemplate" size="md" title="گزارش خطا">
+  <ng-template #reportBugBodyTemplate>
+    <div class="card">
+      <div class="body">
+        <div class="row mx-0">
+          <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <label class="form-control-label"><i class="mdi mdi-comment-text-outline mdi-18px mr-2"></i>شرح</label>
+            <textarea class="form-control" rows="5"></textarea>
+          </div>
+        </div>
+
+        <div class="row mx-0">
+          <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <label class="form-control-label"><i class="mdi mdi-attachment mdi-18px mr-2"></i>پیوست</label>
+            <img class="report-bug-img w-100 h-100" id="reporBugImage" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #reportBugFooterTemplate>
+    <div class="w-100 d-flex justify-content-between align-items-center">
+      <small>{{homeData.today | dateTimeFormat: 'date' : 'fa' : 'dddd jD jMMMM jYYYY [ساعت] hh:mm a' }}</small>
+      <button type="button" class="btn btn-primary btn-md-block btn-icon"><b><i class="mdi mdi-send"></i></b>ارسال
+        گزارش</button>
+    </div>
+  </ng-template>
+</app-dialog> -->
+
+
+
+</main>
+
+<p-toast position="top-center" key="delete" (onClose)="onReject()" [baseZIndex]="50000">
+  <ng-template let-message pTemplate="message">
+    <div class="p-flex p-flex-column" style="flex: 1">
+      <div class="p-text-center">
+        <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+        <h6>{{message.summary}}</h6>
+        <p>{{message.detail}}</p>
+      </div>
+      <div class="p-grid p-fluid">
+        <div class="p-col-6">
+          <button type="button" pButton (click)="onConfirm()" label="{{'Public.Yes' | translate }}"
+            class="p-button-success"></button>
+        </div>
+        <div class="p-col-6">
+          <button type="button" pButton (click)="onReject()" label="{{'Public.No' | translate }}"
+            class="p-button-secondary"></button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-toast>

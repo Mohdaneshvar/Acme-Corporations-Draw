@@ -1,0 +1,72 @@
+<div class="d-flex align-items-end">
+  <!-- <p class="copyrights"> ©
+    تمامی حقوق برای <a class="link" href="https://www.pdnco.ir/" target="_blank"
+      title="ورود به سایت شرکت پایانه های داده ای نوین"> شرکت پایانه های داده ای نوین</a>
+    محفوظ است.
+
+  </p> -->
+
+</div>
+
+
+<section class="d-flex justify-content-center align-items-md-center">
+  <div class="login-container p-col-12 p-col-5">
+    <div class="card card-login">
+      <div class="header text-center mb-5">
+        
+        <h2>Acme Corporation's Draw</h2>
+      </div>
+
+      <div class="body">
+        <form id="formLogin" [formGroup]="formLogin" autocomplete="on">
+          <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col-12">
+              <label class="form-control-label">User name</label>
+              <input  id="nationalcode" autocomplete="on" type="text" pInputText formControlName="userName"  (keydown.enter)="login(formLogin.value)"
+                placeholder="Please enter username" />
+            </div>
+
+            <div class="p-field p-col-12">
+              <label class="form-control-label">Password</label>
+              <input id="mobile" type="password" pInputText formControlName="password"  (keydown.enter)="login(formLogin.value)"
+                placeholder="Please enter password" />
+            </div>
+
+
+  <!-- captcha challenge: placeholder -->
+
+
+            <!-- <div class="p-field p-col-12 text-center">
+              <img class="col-6 captcha-img" [ngClass]="captcha ? 'visible' : 'invisible'" src="{{captcha?.Image}}"
+                title="کد امنیتی">
+            </div>
+
+            <div class="p-field p-col-12">
+              <label class="form-control-label">{{ 'Page.Login.Captcha' | translate }}</label>
+
+              <div class="p-inputgroup">
+                <input type="text" pInputText formControlName="Image" (keydown.enter)="login(formLogin.value)"
+                  placeholder="{{ 'Page.Login.Placeholder.Captcha' | translate }}" appNumeric="4" />
+                <button type="button" pButton pRipple icon="pi pi-refresh" (click)="getNewCaptcha()"></button>
+              </div>
+            </div> -->
+          </div>
+        </form>
+    <div class="p-field p-col-12">
+        <botdetect-captcha captchaStyleName="captchaStyle"></botdetect-captcha>
+        <input id="captchaUserInput"
+               name="captchaUserInput"
+               ngModel
+               #captchaUserInput="ngModel"  (keydown.enter)="login(formLogin.value)"
+               type="text" >
+
+              </div>
+      </div>
+
+      <div class="footer d-flex justify-content-center">
+        <button pButton pRipple label="Enter" icon="mdi mdi-login mdi-18px" (click)="login(formLogin.value)"></button>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<section>
+  <div class="p-col-12 d-flex justify-content-center">
+    <div class="p-col-12 p-p-0">
+
+      <div class="d-flex">
+
+        <div class="p-xl-12 p-lg-12">
+          <div class="card card-info card-info">
+            <div class="header d-flex justify-content-between">
+              <div class="d-flex flex-column">
+                <h4 class="title"><i class="mdi mdi-account p-ml-1"></i> Participant List</h4>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button (click)="back()"  label="Back to main menu" pButton  iconPos="left" class="p-button-info"></button>
+            
+            </div>
+          </div>
+            
+          <div class="body" >
+           
+<p-table [value]="modelList" [lazy]="true" (onLazyLoad)="loadLazyDataPaging($event)"
+[paginator]="true" [rows]="10" [totalRecords]="totalRecords" [loading]="loading" [globalFilterFields]="['name','country.name', 'company', 'representative.name']">
+<ng-template pTemplate="header">
+    <tr>
+        <th >participantId </th>
+        <th >firstName </th>
+        <th >lastName </th>
+        <th >emailAddress </th>
+        <th >productSerialNumber </th>
+        <th >drawId </th>
+        <th >drawResultState </th>
+        <th >registerDate</th>
+    </tr>
+   
+</ng-template>
+<ng-template pTemplate="body" let-participant>
+    <tr>
+        <td>{{participant.participantId}}</td>
+        <td>{{participant.firstName}}</td>
+        <td>{{participant.lastName}}</td>
+        <td>{{participant.emailAddress}}</td>
+        <td>{{participant.productSerialNumber}}</td>
+        <td>{{participant.drawId}}</td>
+        <td>{{participant.drawResultStateString}}</td>
+        <td>{{participant.registerDate |  date:'short'}}</td>
+    </tr>
+</ng-template>
+</p-table>
+
+</div>
+</div>
+</div>
+</div>
+</div></div>
+  </section>
+
+ 

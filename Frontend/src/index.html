@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fa" >
+
+<head>
+  <title>Acme Corporation's Draw</title>
+
+  <base href="/">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="fa" />
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <link rel="stylesheet" type="text/css" href="/assets/plugins/bootstrap/rtl/bootstrap.min.css">
+  <link id="theme-css" rel="stylesheet" type="text/css" href="/assets/themes/theme1.min.css">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style>
+
+/* .p-md-4 {
+  width: 33.3333%!important;
+} */
+
+    @keyframes animation-loading {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    .index-loading-container {
+      font-family: "Tahoma";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+    }
+
+    .index-loading-container .header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .index-loading-container .header .animation-loading {
+      margin-left: 15px;
+      background-color: transparent;
+      border: 4px solid transparent;
+      border-left-color: #7266FC;
+      border-top-color: rgba(0, 0, 0, 0.2);
+      border-right-color: rgba(0, 0, 0, 0.2);
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      transform: translateZ(0);
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: .5s;
+      animation-name: animation-loading;
+    }
+
+    .index-loading-container .header .animation-loading,
+    .index-loading-container .header .animation-loading:after {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .index-loading-container .header .title {
+      white-space: nowrap;
+    }
+
+    .index-loading-container .wait {
+      margin-top: 10px;
+    }
+
+  </style>
+
+  <script async>
+    if (window.localStorage) {
+      var setting = window.localStorage.getItem('setting');
+      if (setting) {
+        setting = JSON.parse(setting);
+        var themeLink = document.getElementById('theme-css');
+        themeLink.href = '/assets/themes/' + setting.theme + '.min.css';
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="index-loading-container">
+    <div class="header">
+      <div class="animation-loading"></div>
+      <span class="title">Acme Corporation's Draw</span>
+    </div>
+    <small class="wait">Please wait...</small>
+  </div>
+
+  <app-root></app-root>
+</body>
+
+</html>

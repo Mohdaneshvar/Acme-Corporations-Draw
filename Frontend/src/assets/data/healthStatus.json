@@ -1,0 +1,9 @@
+[
+  {"label": "سالم", "value": 1,"isChecked":false,"nameInSystem" : "healty"},
+  {"label": "دارای معلولیت", "value": 2,"isChecked":false,"nameInSystem" : "caused"},
+  {"label": "بیماری خاص", "value": 3,"isChecked":false,"nameInSystem" : "special"},
+  {"label": "بیماری صعب العلاج", "value": 4,"isChecked":false,"nameInSystem" : "hard"},
+  {"label": "بیماری سرطانی", "value": 5,"isChecked":false,"nameInSystem" : "cancer"},
+  {"label": "پیوند اعضاء", "value": 6,"isChecked":false,"nameInSystem" : "member"},
+  {"label": "جانبازی", "value": 7,"isChecked":false,"nameInSystem" : "veteran"}
+]

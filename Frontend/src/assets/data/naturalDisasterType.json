@@ -1,0 +1,9 @@
+[
+    {"value":null,"label":"انتخاب کنید"},
+    {"value":1,"label":"زلزله"},
+    {"value":2,"label":"سیل"},
+    {"value":3,"label":"آتش‌سوزی"},
+    {"value":4,"label":"بروز آفات"},
+    {"value":5,"label":"خشکسالی"},
+    {"value":6,"label":"طوفان"}
+]

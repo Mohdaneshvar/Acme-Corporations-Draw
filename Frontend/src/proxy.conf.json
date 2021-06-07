@@ -1,0 +1,6 @@
+{
+    "/captcha": {
+      "target": "http://localhost:4114",
+      "secure": false
+    }
+  }

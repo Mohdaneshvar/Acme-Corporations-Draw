@@ -1,0 +1,20 @@
+{
+  "home/livelihood/inquiry": {
+    ".card-inquiry": {
+      "title": "استعلام سرپرست خانوار",
+      "description": "فرم استعلام سرپرست خانوار"
+    },
+    "[formcontrolname=\"nationalcode\"]": {
+      "title": "شماره ملی",
+      "description": "«شماره ملی» را وارد کنید"
+    },
+    "[formcontrolname=\"familyMemebreNationalCode\"]": {
+      "title": "شماره ملی یکی از اعضاء",
+      "description": "شماره ملی یکی از اعضاء را وارد کنید"
+    },
+    "[formcontrolname=\"accountNo\"]": {
+      "title": "شماره حساب یارانه",
+      "description": "«شماره حساب یارانه» را وارد کنید"
+    }
+  }
+}

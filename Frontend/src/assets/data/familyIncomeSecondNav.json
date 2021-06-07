@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "درآمد از محل دارایی های کنونی",
+    "icon" : "mdi-playlist-check",
+    "done" : false
+  },
+{
+  "id": 2,
+  "title": "درآمد از محل واردات و صادرات",
+  "icon" : "mdi-application-import",
+  "done" : false
+},
+{
+  "id": 3,
+  "title": "سود سپرده های بانکی",
+  "icon" : "mdi-bank-transfer",
+  "done" : false
+},
+{
+  "id": 4,
+  "title": "درآمد حاصل از دریافت مهریه",
+  "icon" : "mdi-gold",
+  "done" : false
+},
+{
+  "id": 5,
+  "title": "درآمد حاصل از فروش ارز",
+  "icon" : "mdi-cash-multiple",
+  "done" : false
+}
+]
+

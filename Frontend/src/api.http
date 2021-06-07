@@ -1,0 +1,8 @@
+
+POST http://192.168.10.113:8093/Api/BaseInfo/InsertProvince
+Content-Type: application/json
+# Authorization: Bearer U2FsdGVkX18Bwebv1l17jnJd2PV15RTYNrW9XmSU3lGQ47IeGjFFC5/0GxGzUFyNF9ttmKzoaDYrIhcA7QUMm5QqqXQUzM0mLHS/ez8klNM/dq63D6D6Z8dFUL/ngt17vNCzJzeZlnW161FAT+L9RqZdZnDuojOD43ad1/tVuqVlF9oWgOSI4S4GNdYi+XM2hKbwzkxhlJcXgKgPKlBbcqOR+WknndDZxD1Bcn57uZ4ZIep6bDPCjaWdNGfIm/82k3LbVk4pzZhbZmVNGpLkI6L4kqvHpw+fHTb7nmfmV9zVvMblxLrbPeZcV1lZ1u5vzNq5LgeSLpBvXLKf4p8nDpjRmhpz/5ldMwVUWUWJndJAFm7OOm6fp1DsFi3KYbiejPOQhC1wuHknR/DumG9sCvml/U+A8W3cpiRYor4bh/R7ksRuVE4QzYzLxUmscjrMouECfUmY8htmOe8o5atzCSvrDqNPxVHn0Sk+UhAX2HVDICjF/NXDLUitEyYddbz0
+
+{
+    "Id":1,"Title":"تهران"
+}

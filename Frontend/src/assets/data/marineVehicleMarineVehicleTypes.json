@@ -1,0 +1,26 @@
+
+[{
+  "value": null,
+  "label": "انتخاب کنید"
+},
+    {
+        "value": 1,
+        "label": "کشتی"
+    },
+    {
+        "value": 2,
+        "label": "دوبه"
+    },
+    {
+        "value": 3,
+        "label": "لنج"
+    },
+    {
+        "value": 4,
+        "label": "قایق"
+    },
+    {
+        "value": 5,
+        "label": "سایر"
+    }
+]

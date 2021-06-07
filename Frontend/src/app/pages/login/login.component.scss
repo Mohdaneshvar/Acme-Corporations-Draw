@@ -1,0 +1,49 @@
+:host {
+  @media only screen and (max-width: 600px) {
+    .card-login {
+      height: 100vh;
+      margin: 0 !important;
+    }
+  }
+
+  section {
+    height: 100vh;
+    background-image: url('../../../assets/imgs/bg.svg');
+  }
+
+  input {
+    direction: ltr;
+  }
+
+  .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    z-index: 2;
+
+    #formLogin {
+      .captcha-img {
+        height: 60px;
+        min-height: 60px;
+        border: 1px solid #e6eaea;
+      }
+    }
+  }
+}
+
+.copyrights {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  font-size: 9.5pt;
+  z-index: 1;
+
+  .link {
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="input-group">
+  <div class="input-group-prepend col-4 p-0">
+    <select class="form-control rounded-left" (change)="changeValue()" [(ngModel)]="day"
+      [attr.disabled]="isDisabled ? true : null">
+      <option value="0" disabled selected>روز</option>
+      <option *ngFor="let item of dayList" [value]="item.Id">{{item.Title}}</option>
+    </select>
+  </div>
+
+  <select class="form-control col-4 p-0" (change)="changeValue()" [(ngModel)]="month"
+    [attr.disabled]="isDisabled ? true : null">
+    <option value="0" disabled selected>ماه</option>
+    <option *ngFor="let item of monthList" [value]="item.Id">{{item.Id}} - {{item.Title}}</option>
+  </select>
+
+  <div class="input-group-append col-4 p-0">
+    <input pInputText class="form-control text-center rounded-right" placeholder="سال" [(ngModel)]="year"
+      (input)="changeValue()"  [attr.disabled]="isDisabled ? true : null" appNumeric="4">
+      <!--  (blur)="fixYear()" -->
+  </div>
+</div>

@@ -1,0 +1,101 @@
+.index-card {
+    max-width: 1000px !important;
+    .logo {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+.card-widget {
+    position: relative;
+    border-radius: 5px;
+    background-color: #f2f7f8;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background-color: darken($color: #f2f7f8, $amount: 5);
+        .progress-bar {
+            animation: progress-bar-stripes 1s linear infinite;
+        }
+    }
+    .hint {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        opacity: .7;
+    }
+    .icon1,
+    .icon2 {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 20pt;
+    }
+    .icon1 {
+        background-color: #ffd8d8;
+        color: #ff5555;
+    }
+    .icon2 {
+        background-color: #cdf3cf;
+        color: #62c169;
+    }
+}
+
+.card-index {
+    .header {
+        height: 200px;
+        background-color: #7266FC;
+        @media only screen and (max-width: 600px) {
+            .title {
+                font-size: 1.2rem !important;
+            }
+        }
+        .title {
+            color: #fff;
+        }
+    }
+    .body {
+        &>.form-row {
+            margin-top: -60px;
+        }
+    }
+}
+
+.help-contents {
+    margin-top: 60px;
+    text-align: justify;
+    font-size: .9rem !important;
+    font-family: "IRANSansFaNum", "tahoma" !important;
+    line-height: 1.5rem;
+}
+
+.help-contents ul {
+    list-style: square;
+}
+
+.help-contents ul li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn-widget-container {
+        width: auto !important;
+    }
+    .help-contents {
+        margin-top: 0px !important;
+        height: 320px;
+        overflow-y: auto;
+    }
+}
+
+.wh34 {
+    width: 24px;
+    height: 24px !important;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.h34 {
+    height: 24px !important;
+}

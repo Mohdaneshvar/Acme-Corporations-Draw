@@ -1,0 +1,145 @@
+@import "base/mixin";
+
+:host {
+  @include card-color("card-user", #0abb87);
+  @include card-color("card-info", #00a7df);
+
+  .progressbar {
+    $color: #e0e0e0;
+    $activeColor: #7266fc;
+    $doneColor: #2dcea2;
+
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    list-style: none;
+
+    li {
+      flex: 1;
+      position: relative;
+      text-align: center;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 5px;
+        background-color: $color;
+        position: absolute;
+        left: -50%;
+        top: 20px;
+        z-index: -1;
+      }
+
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
+
+      &.active {
+        font-weight: bold;
+        color: $activeColor;
+
+        &::after {
+          background-color: $activeColor;
+        }
+
+        .mdi {
+          background-color: $activeColor !important;
+          color: #fff;
+
+          &::before {
+            animation: 1s tada forwards;
+          }
+        }
+      }
+
+      &.done {
+        &::after {
+          background-color: $doneColor;
+        }
+
+        .mdi {
+          background-color: $doneColor;
+          color: #fff !important;
+        }
+      }
+
+      .mdi {
+        width: 44px;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color;
+        color: #6b6b6b;
+        font-size: 1.3rem;
+        border-radius: 50%;
+        // border: 1px solid #fff;
+        margin: 0 auto 1rem auto;
+      }
+    }
+  }
+
+  .user-card {
+    $icon-color: #ff9644;
+
+    &-header {
+
+      .mdi {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 91px;
+        height: 90px;
+        font-size: 3.5rem;
+        border-radius: 50%;
+        color: #fff;
+        background-color: $icon-color;
+      }
+    }
+
+    &-body {
+      border-bottom: 1px dashed #e0e0e0;
+
+      .list {
+        list-style: none;
+
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px;
+
+          .mdi {
+            color: $icon-color;
+          }
+
+          .key {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .family-nav {
+      list-style: none;
+
+      li {
+        $active-color: #5B9BD1;
+        border-right: 3px solid transparent;
+        padding: 10px 10px 15px 5px;
+
+        &.active {
+          background-color: #F6F9FB;
+          border-right-color: $active-color;
+
+          .mdi {
+            color: $active-color;
+          }
+        }
+      }
+    }
+  }
+}

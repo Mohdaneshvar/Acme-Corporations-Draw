@@ -1,0 +1,13 @@
+:host {
+  ::placeholder {
+    text-align: center;
+  }
+
+  .form-control {
+    border-radius: unset;
+  }
+
+  .input-group-prepend.col-4.p-0 {
+    z-index: 1;
+  }
+}

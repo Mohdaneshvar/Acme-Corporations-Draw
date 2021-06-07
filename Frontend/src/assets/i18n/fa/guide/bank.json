@@ -1,0 +1,28 @@
+{
+  "home/base-info/bank": {
+    ".card-bank": {
+      "title": "بانک ها",
+      "description": "فرم ثبت و ویرایش اطلاعات بانک ها"
+    },
+    "[formcontrolname=\"Title\"]": {
+      "title": "عنوان",
+      "description": "عنوان یا نام بانک را وارد کنید"
+    },
+    "[formcontrolname=\"Phone\"]": {
+      "title": "تلفن",
+      "description": "تلفن بانک را وارد کنید <br><small class=\"d-block text-left text-info \">مثال: 02166666666</small>"
+    },
+    "[formcontrolname=\"Type\"] .dropdown": {
+      "title": "عنوان",
+      "description": "نوع  بانک را انتخاب کنید"
+    },
+    "[formcontrolname=\"Area\"]": {
+      "title": "شهر",
+      "description": "شهر را وارد کنید"
+    },
+    "[formcontrolname=\"Address\"]": {
+      "title": "آدرس",
+      "description": "آدرس بانک را وارد کنید"
+    }
+  }
+}

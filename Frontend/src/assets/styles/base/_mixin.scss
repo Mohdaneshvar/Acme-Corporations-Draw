@@ -1,0 +1,31 @@
+@mixin font-face($family, $src) {
+  @font-face {
+    font-family: $family;
+    font-style: normal;
+    font-weight: normal;
+    src: url($src);
+  }
+}
+
+@mixin card-color($classname, $color) {
+
+  .card.#{$classname} {
+    .header {
+      &::before {
+        background-color: $color;
+      }
+
+      .title {
+        .mdi {
+          color: $color;
+        }
+      }
+    }
+
+    .group-header {
+      .mdi {
+        color: $color;
+      }
+    }
+  }
+}

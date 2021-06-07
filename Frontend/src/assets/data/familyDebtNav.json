@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "تسهیلات بانکی",
+    "icon" : "mdi-bank-plus",
+    "done" : false
+  },
+{
+  "id": 2,
+  "title": "تعهدات بانکی",
+  "icon" : "mdi-bank-minus",
+  "done" : false
+},
+{
+  "id": 3,
+  "title": "خرید اقساطی کالا",
+  "icon" : "mdi-stove",
+  "done" : false
+},
+{
+  "id": 4,
+  "title": "سایر بدهی ها (بیش از 100 میلیون ریال)",
+  "icon" : "mdi-clipboard-list-outline",
+  "done" : false
+}
+]

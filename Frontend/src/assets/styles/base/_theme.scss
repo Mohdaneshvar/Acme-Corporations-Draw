@@ -1,0 +1,299 @@
+// $primary-color:#51b75e;
+// $primary-color:#9d51b7;
+// $primary-color:#00bfff;
+// $primary-color:#51b7ae;
+// $primary-color:#ff3a8c;
+// $primary-color:#0099cc;
+// $primary-color:#ffbb05;
+// $primary-color:#403cad;
+// $primary-color:#ff5d44;
+// $primary-color:#ff8bbe;
+
+$blue-color: #007bff;
+$success-color: #28a745;
+$secondary-color: #6c757d;
+$light-color: #f8f9fa;
+$warning-color: #d39e00;
+$danger-color: #dc3545;
+$info-color: #17a2b8;
+$dark-color: #343a40;
+
+@mixin color-darken($val) {
+  color: darken($color: $primary-color, $amount: $val) !important;
+}
+
+@mixin bg-darken($val) {
+  background-color: darken($color: $primary-color, $amount: $val) !important;
+}
+
+@mixin border-darken($val) {
+  border-color: darken($color: $primary-color, $amount: $val) !important
+}
+
+%box-shadow {
+  box-shadow: 0 0 0 0.2rem rgba($color: $primary-color, $alpha: 0.4)
+}
+
+#main {
+  .layout-container {
+    .side-bar {
+      .navbar-brand {
+        .sidenav-toggler-inner {
+          &:hover {
+
+            .angle-left,
+            .angle-right {
+              path {
+                fill: $primary-color;
+
+              }
+            }
+          }
+
+          .angle-left,
+          .angle-right {
+            path {
+              transition: fill .3s ease;
+              fill: #494b74;
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      nav.fixed {
+        background-color: $primary-color;
+
+        .header-container {
+          .navbar-nav {
+            .nav-item {
+
+              .nav-link {
+
+                &.badge-dot::after,
+                .badge {
+                  @include bg-darken(20);
+                  border-color: $primary-color !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-primary,
+.btn.btn-primary {
+  background-color: $primary-color !important;
+
+  &:hover {
+    @include bg-darken(10);
+    @include border-darken(15);
+  }
+
+  &:focus {
+    @include bg-darken(10);
+    @extend %box-shadow;
+  }
+
+  &:not(:disabled):not(.disabled):active:focus {
+    @extend %box-shadow;
+  }
+
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):active {
+    @include bg-darken(10);
+  }
+}
+
+.nav-list-secondary-item {
+
+  &:hover,
+  &.active {
+    &::before {
+      color: $primary-color !important;
+    }
+  }
+}
+
+.text-theme {
+  color: $primary-color !important;
+}
+
+.page-item.active {
+  .page-link {
+    @include bg-darken(10);
+    @include border-darken(15);
+  }
+}
+
+.btn-toggle {
+  &.active {
+    background-color: $primary-color;
+  }
+}
+
+.dropdown-item {
+
+  &.active,
+  &:active {
+    color: #16181b !important;
+    background-color: #f8f9fa !important;
+  }
+}
+
+.card-index {
+  .header {
+    background-color: $primary-color;
+  }
+}
+
+.link {
+  color: $primary-color !important;
+
+  &:hover {
+    cursor: pointer !important;
+    @include color-darken(10);
+  }
+}
+
+.radio {
+  input[type="radio"] {
+    &:checked {
+      +label {
+        &::before {
+          border-color: $primary-color;
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.checkbox {
+  input[type="checkbox"] {
+    &:checked {
+      +label {
+        &::after {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.btn.btn-icon:not(:disabled):not(.disabled) {
+  transition: all ease 0.8s;
+
+  @mixin getColor($color) {
+    $darken-color: darken($color: $color, $amount: 10);
+    background: linear-gradient(to left, $color 50%, $darken-color 50%);
+
+    b {
+      background-color: $darken-color;
+    }
+  }
+
+  &.btn {
+    &-primary {
+      @include getColor($primary-color);
+    }
+
+    &-success {
+      @include getColor($success-color);
+    }
+
+    &-secondary {
+      @include getColor($secondary-color);
+    }
+
+    &-light {
+      @include getColor($light-color);
+    }
+
+    &-warning {
+      @include getColor($warning-color);
+    }
+
+    &-danger {
+      @include getColor($danger-color);
+    }
+
+    &-info {
+      @include getColor($info-color);
+    }
+
+    &-dark {
+      @include getColor($dark-color);
+    }
+
+    &-blue {
+      @include getColor($blue-color);
+    }
+  }
+}
+
+.index-loading-container {
+  .header {
+    border-bottom-color: $primary-color !important;
+  }
+}
+
+.card-progress {
+  background-color: lighten($color: $primary-color, $amount: 15);
+
+  .indeterminate {
+    @include bg-darken(15);
+  }
+}
+
+.animation-loading {
+  border-left-color: $primary-color !important;
+}
+
+::selection {
+  @include bg-darken(15);
+  color: #fff;
+}
+
+.form-control:focus {
+  border-color: lighten($color: $primary-color, $amount: 15);
+  box-shadow: 0 0 0 0.2rem transparentize($color: $primary-color, $amount: 0.75);
+}
+
+.scroll-to-top {
+  background-color: $primary-color;
+
+  &:hover {
+    @include bg-darken(10);
+  }
+}
+
+.timeline {
+  .item {
+    &::before {
+      border-color: $primary-color !important;
+    }
+  }
+}
+
+app-multiple-select {
+  &:focus {
+    input {
+      border-color: lighten($color: $primary-color, $amount: 15) !important;
+      box-shadow: 0 0 0 0.2rem transparentize($color: $primary-color, $amount: 0.75) !important;
+    }
+  }
+}
+
+app-tree-select {
+  &:focus {
+    .selector-container {
+      border-color: lighten($color: $primary-color, $amount: 15) !important;
+      box-shadow: 0 0 0 0.2rem transparentize($color: $primary-color, $amount: 0.75) !important;
+    }
+  }
+}
