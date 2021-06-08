@@ -32,7 +32,7 @@ With running the project, its database is created automatically based on connect
 
 ## Additional Description
 Admin user info for login to see participants list and create new serial number is:
-<\br>
+
 UserName=`admin`, Password=`admin`
 
 
@@ -45,23 +45,23 @@ This is my own Framework and it like Onion architecture and it's shared in my pr
 
 ### App.Service.AspDotNetDistributor
 
-This layer just make web API for each command on the `AppService` layer 
+This layer just make a web API endpoint for each command on the `App Service` layer
 
 ### AppService
 
-I used `CQRS` and `Command bus` pattern in this layer, this layer includes implementation of all commands and Queries.
+I used `CQRS` and `Command bus` pattern in this layer, this layer includes implementation of all commands and queries.
 
 ### AppService.Contracts
 
-this layer includes a list of all Command And Query without implementation.
+This layer includes a list of all command And query without implementation.
 
 ## Domain
 
-this layer includes all entities.
+This layer includes all entities.
 
 ## Application.UnitTests
 
-this layer includes unit tests with `NUnit`
+This layer includes unit tests with `NUnit`
 
 ## Design patterns and feature
 `CQRS`,`Command Bus`, `Repository`,`UnitOfWork`,`NUnit`, `Dependency injection`
