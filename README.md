@@ -3,7 +3,7 @@
 
 <br/>
 
-this is a website landing page for an international company called “Acme Corporation” that allows people to enter a draw for a prize.
+This is a website landing page for an international company called “Acme Corporation” that allows people to enter a draw for a prize.
 
 ## Technologies
 
@@ -24,15 +24,15 @@ this is a website landing page for an international company called “Acme Corpo
 6. Run project(press F5)
 7. Navigate to `frontend` folder and run `npm install`
 8. Navigate to `frontend` and run `ng serve` to launch the front end (Angular)
-9. open localhost:4200 on browser
+9. Open localhost:4200 on browser
 
 ### Database Migrations
 
-with running project database is created automaiclly base on connection string in `appsettings.json`
+With running the project, its database is created automatically based on connection string in `appsettings.json`
 
-## Additional description
-. admin user info for login to see participants list and create new serial number is: 
-    UserName=`admin`, Password=`admin`
+## Additional Description
+Admin user info for login to see participants list and create new serial number is:
+UserName=`admin`, Password=`admin`
 
 
 ## Overview
