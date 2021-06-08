@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
 
 @Injectable({ providedIn: 'root' })
-export class AuthGuard implements CanActivate, CanActivateChild {
+export class AuthGuard implements CanActivate{
 
     constructor(private router: Router, private injector: Injector, private authService: AuthService) { }
 
