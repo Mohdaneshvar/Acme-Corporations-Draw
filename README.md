@@ -22,8 +22,8 @@ This is a website landing page for an international company called “Acme Corpo
 4. Right click on the `App.Service.AspDotNetDistributor` project and select `Set as StartUp Project` item
 5. Set sql server connectionstrings on `appsettings.json`
 6. Run project(press F5)
-7. Navigate to `frontend` folder and run `npm install`
-8. Navigate to `frontend` and run `ng serve` to launch the front end (Angular)
+7. On the Powershell navigate to `frontend` folder and run `npm install` (to the best understanding of frontend code, you can use Visual Studio Code, you just need to open the `frontend` folder on Visual Studio Code)
+8. On the Powershell navigate to `frontend` and run `ng serve` to launch the front end (Angular)
 9. Open localhost:4200 on browser
 
 ### Database Migrations
