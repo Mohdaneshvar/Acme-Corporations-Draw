@@ -32,6 +32,7 @@ With running the project, its database is created automatically based on connect
 
 ## Additional Description
 Admin user info for login to see participants list and create new serial number is:
+<\br>
 UserName=`admin`, Password=`admin`
 
 
