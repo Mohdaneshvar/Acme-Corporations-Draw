@@ -33,23 +33,30 @@ namespace AppService.Command_Handler.Accounts
         public async Task HandleAsync(CreateSerialNumberCommand command, CancellationToken cancellationToken)
         {
             var result = new List<AllSerialNumber>();
-            for (int i = 0; i < command.Count; i++)
+            int i = 0;
+            while (i<command.Count)
             {
-                result.Add(new AllSerialNumber
+                var serial = SKGLTools.CreateSerial(30, appSettings.SKGLSecretPhase);
+                var isExist = await repositorySerialNumber.FindAsync(serial);
+                if (isExist == null && !result.Any(x => x.SerialNumber == serial))
                 {
-                    SerialNumber = SKGLTools.CreateSerial(30, appSettings.SKGLSecretPhase)
-                });
-                
+                    result.Add(new AllSerialNumber
+                    {
+                        SerialNumber = SKGLTools.CreateSerial(30, appSettings.SKGLSecretPhase)
+                    });
+                    i++;
+                }
             }
+            
             await repositorySerialNumber.AddRangeAsync(result);
-            var text = result.Select(x=>x.SerialNumber).Aggregate((x,y)=>
-            {
-                if (!string.IsNullOrEmpty(y))
-                    return x + Environment.NewLine + y;
-                else
-                    return x;
-            });
-            command.Result = new FileContentResult(Encoding.UTF8.GetBytes(text), "text/plain") { FileDownloadName = $"SerialNumber{DateTime.Now.ToShortDateString()}.txt"};
+            var text = result.Select(x => x.SerialNumber).Aggregate((x, y) =>
+              {
+                  if (!string.IsNullOrEmpty(y))
+                      return x + Environment.NewLine + y;
+                  else
+                      return x;
+              });
+            command.Result = new FileContentResult(Encoding.UTF8.GetBytes(text), "text/plain") { FileDownloadName = $"SerialNumber{DateTime.Now.ToShortDateString()}.txt" };
         }
     }
 }
