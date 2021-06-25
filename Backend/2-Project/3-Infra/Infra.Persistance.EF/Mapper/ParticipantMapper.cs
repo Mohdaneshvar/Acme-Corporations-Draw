@@ -10,7 +10,7 @@ namespace Infra.Persistance.EF.Mapper
         public void Configure(EntityTypeBuilder<Participant> builder)
         {
             builder.HasKey(x => x.ParticipantId);
-            builder.HasCheckConstraint("CheckSerialNumberLessThanTwo", "[dbo].[CheckSerial]([ProductSerialNumber])<=1");
+            builder.HasCheckConstraint("CheckSerialNumberLessThanTwo", "[dbo].[CheckSerial]([ProductSerialNumber])<=2");
         }
     }
 }

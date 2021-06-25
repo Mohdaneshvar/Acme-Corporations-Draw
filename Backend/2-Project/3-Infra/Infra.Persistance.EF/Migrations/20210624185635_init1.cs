@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infra.Persistance.EF.Migrations
 {
-    public partial class init2 : Migration
+    public partial class init1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -87,7 +87,7 @@ namespace Infra.Persistance.EF.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Participants", x => x.ParticipantId);
-                    table.CheckConstraint("CheckSerialNumberLessThanTwo", "[dbo].[CheckSerial]([ProductSerialNumber])<=1");
+                    table.CheckConstraint("CheckSerialNumberLessThanTwo", "[dbo].[CheckSerial]([ProductSerialNumber])<=2");
                 });
 
             migrationBuilder.CreateTable(
