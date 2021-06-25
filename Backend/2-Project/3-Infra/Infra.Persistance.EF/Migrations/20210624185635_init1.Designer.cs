@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infra.Persistance.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210605194604_init2")]
-    partial class init2
+    [Migration("20210624185635_init1")]
+    partial class init1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -209,7 +209,7 @@ namespace Infra.Persistance.EF.Migrations
 
                     b.ToTable("Participants");
 
-                    b.HasCheckConstraint("CheckSerialNumberLessThanTwo", "[dbo].[CheckSerial]([ProductSerialNumber])<=1");
+                    b.HasCheckConstraint("CheckSerialNumberLessThanTwo", "[dbo].[CheckSerial]([ProductSerialNumber])<=2");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

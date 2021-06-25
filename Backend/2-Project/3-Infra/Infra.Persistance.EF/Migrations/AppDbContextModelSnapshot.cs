@@ -207,7 +207,7 @@ namespace Infra.Persistance.EF.Migrations
 
                     b.ToTable("Participants");
 
-                    b.HasCheckConstraint("CheckSerialNumberLessThanTwo", "[dbo].[CheckSerial]([ProductSerialNumber])<=1");
+                    b.HasCheckConstraint("CheckSerialNumberLessThanTwo", "[dbo].[CheckSerial]([ProductSerialNumber])<=2");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
