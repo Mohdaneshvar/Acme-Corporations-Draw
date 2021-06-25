@@ -24,7 +24,7 @@ export class CreateSerialNumberComponent implements OnInit {
   }
   createSerialNumber()
   {
-    const param: CreateSerialNumber = { count:100};
+    const param: CreateSerialNumber = { count:10};
     AddCardLoading('create-serial-number', 'btn-primary');
     this.serialNumberService.createSerialNumber(param).subscribe(
       (response) => {
